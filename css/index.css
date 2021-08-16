@@ -1,0 +1,360 @@
+html,body{
+  width: 100%;
+  height: 100vh;
+}
+body>a{
+  display: none;
+}
+.g-doc{
+  width: 7.5rem;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  font-size: 0.24rem;
+  font-family:华文细黑,STHeiti;
+}
+.swiper-vertical{
+  height: 100%;
+}
+.area1{
+  width: 7.5rem;
+  background: url(../images/area1.jpg);
+  background-size: 7.5rem;
+  height: 100vh;
+  position: relative;
+}
+.tit{
+  width: 5.32rem;
+  height: 3rem;
+  background: url(../images/title.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 0.74rem;
+  top: 4.7rem;
+}
+.logo{
+  width: 3.22rem;
+  height: 1rem;
+  background: url(../images/logo.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 0.74rem;
+  top: 8.2rem;
+}
+.area2{
+  width: 7.5rem;
+  background-size: 7.5rem;
+  height: 100vh;
+  position: relative;
+}
+.tit2{
+  width: 5.76rem;
+  height: 3rem;
+  background: url(../images/tit.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 0.92rem;
+  top: 1rem;
+}
+.rank1{
+  width: 4.44rem;
+  height: 3rem;
+  background: url(../images/rank1.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 1.52rem;
+  top: 8rem;
+}
+.rank2{
+  width: 3.7rem;
+  height: 3rem;
+  background: url(../images/rank2.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 1.6rem;
+  top: 11rem;
+}
+
+.swiper-car-pagination{
+  display: flex;
+  justify-content: center;
+}
+.swiper-pagination-bullet{
+  width: 1rem;
+  height: 0.08rem;
+  background-color: #868686;
+  border-radius: 0;
+  margin: 0 0.26rem !important;
+  opacity: 0.7;
+}
+.swiper-pagination-bullet-active{
+  background-color: #f50537;
+  opacity: 1;
+}
+.area3{
+  width: 7.5rem;
+  background-size: 7.5rem;
+  height: 100vh;
+  position: relative;
+}
+.header{
+  font-size: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  padding: 1.1rem 0 0 1.3rem;
+  position: relative;
+}
+.name-con{
+  display: flex;
+  width: 5.86rem;
+  padding: 0 0.2rem;
+  margin: 1rem auto 0;
+  flex-wrap: wrap;
+}
+.list{
+  width: 1.78rem;
+  height: 1.7rem;
+  margin: 0 0.06rem 0.16rem;
+  border: 0.02rem solid #fff;
+  border-radius: 0.1rem;
+}
+
+.area4{
+  width: 7.5rem;
+  background-size: 7.5rem;
+  height: 100vh;
+  position: relative;
+}
+
+
+.title{
+  width: 5.32rem;
+  height: 1.44rem;
+  background: url('../images/title.png') no-repeat;
+  background-size: 5.32rem;
+  position: absolute;
+  left: 0.74rem;
+  top: 1rem;
+}
+
+.tit4{
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 0.6rem 0 0 0.8rem;
+  position: relative;
+}
+
+.swiper-bar .swiper-slide,.swiper-name .swiper-slide{
+  height: auto;
+}
+.swiper-container-vertical .swiper-scrollbar{
+  border: 1px solid #fff;
+}
+.swiper-scrollbar-drag{
+  background: #fff;
+  border-radius: 0;
+}
+.btns{
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.up{
+  width: 2.26rem;
+  height: 1.2rem;
+  background: url('../images/up.png') no-repeat;
+  background-size: 100%;
+  margin-right: 0.6rem;
+}
+.file{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.sub{
+  width: 2.26rem;
+  height: 1.2rem;
+  background: url('../images/sure.png') no-repeat;
+  background-size: 100%;
+  /* animation: baom 0.6s linear alternate infinite; */
+}
+.music{
+  width: 0.6rem;
+  height: 0.6rem;
+  position: fixed;
+  right: 0.2rem;
+  top: 0.2rem;
+  background: url('../images/music.png') no-repeat center center;
+  background-size: 0.56rem;
+  z-index: 100;
+}
+.music-current{
+  animation: roral 1.4s linear infinite;
+}
+.question{
+  width: 5.7rem;
+  height: 9rem;
+  padding: 0 0.3rem 0 0;
+  margin: 0 auto;
+  font-size: 0.24rem;
+  color: #fff;
+  line-height: 0.36rem;
+}
+.question .item{
+  padding-top: 0.4rem;
+}
+.question input{
+  width: 1rem;
+  border: none;
+  height: 0.3rem;
+  border-bottom: 1px solid #fff;
+  font-size: 0.24rem;
+  text-align: center;
+}
+.area7{
+  width: 7.5rem;
+  background: url(../images/area7.jpg);
+  background-size: 7.5rem;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 3.2rem;
+}
+.name-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0.3rem;
+  height: 0.4rem;
+}
+.name-item{
+  width: 2rem;
+  border-bottom: 1px solid #fff;
+  height: 0.4rem;
+  font-size: 0.28rem;
+  line-height: 0.4rem;
+  text-align: center;
+}
+.question-btn{
+  width: 3.12rem;
+  height: 1.2rem;
+  background: url(../images/q-btn.png) no-repeat;
+  background-size: 100%;
+  margin: 0.3rem auto 0;
+  animation: baom 0.6s linear alternate infinite;
+}
+
+
+@keyframes roral {
+  from {transform: rotate(0);}
+  to {transform: rotate(360deg);}
+}
+.no{
+  width: 100%;
+  height: 6.4rem;
+  font-size: 0.36rem;
+  color: #fff;
+  line-height: 6.4rem;
+  text-align: center;
+}
+.set{
+  margin-top: 0.1rem;
+}
+.set.cur{
+  color: red;
+}
+.tips{
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.3rem;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  transform: translate(-50%,-50%);
+  display: none;
+}
+.area4-title{
+  font-size: 0.28rem;
+  color: #fff;
+  padding: 0.2rem 0 1.1rem 0.8rem;
+}
+.tit-tip{
+  display: flex;
+  align-items: center;
+}
+.tip-s{
+  margin: 0.08rem 0 0.08rem 1.46rem;
+}
+.tit-tip::before{
+  content: '';
+  width: 0.08rem;
+  height: 0.08rem;
+  background: #FFF;
+  border-radius: 0.04rem;
+  margin-right: 0.12rem;
+}
+.arrow{
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(../images/arrow.png);
+  background-size: 100%;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 0.5rem;
+  animation: arrow 0.6s linear alternate infinite;
+}
+video{
+  width: 100%;
+  height: 100%;
+}
+
+.item{
+  width: 5.4rem;
+  display: flex;
+  margin: 0 auto 0.4rem;
+}
+.pic{
+  font-size: 0.24rem;
+  color: #fff;
+  text-align: center;
+}
+.img{
+  width: 2.8rem;
+  height: 2.02rem;
+  border: 0.02rem solid #fff;
+  border-radius: 0.08rem;
+  margin-bottom: 0.1rem;
+}
+.mess{
+  text-align: center;
+  font-size: 0.24rem;
+  color: #fff;
+  margin-left: 0.3rem;
+  margin-top: 0.3rem;
+}
+.mess span{
+  font-size: 0.3rem;
+  color: #69ebed;
+  margin-right: 0.06rem;
+}
+.btn{
+  width: 2.26rem;
+  height: 0.66rem;
+  background: url('../images/btn.png') no-repeat;
+  background-size: 100%;
+  margin-top: 0.2rem;
+}
+
+@keyframes baom {
+  from {transform: scale(1);}
+  to {transform: scale(1.1);}
+}
+@keyframes arrow {
+  from {transform: translateY(0);}
+  to {transform: translateY(0.4rem);}
+}
