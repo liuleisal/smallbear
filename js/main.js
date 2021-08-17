@@ -86,10 +86,15 @@
           _this.tips('您今天已投两票')
           return
         }
-        num = (parseInt(num)+1).toString()
-        _this.addCookie('samllbear',num)
-        const realnum = $('#num1').text()
-        $('#num1').text(parseInt(realnum+1))
+        _this.vote(_this,1).then(() => {
+          _this.tips('投票成功')
+          num = (parseInt(num)+1).toString()
+          _this.addCookie('samllbear',num)
+          const realnum = $('#num1').text()
+          $('#num1').text(parseInt(realnum)+1)
+        }).catch(() => {
+          _this.tips('投票失败')
+        })
       })
       $('#btn2').click(function(){
         let num = _this.getCookie('samllbear')||0
@@ -97,10 +102,15 @@
           _this.tips('您今天已投两票')
           return
         }
-        num = (parseInt(num)+1).toString()
-        _this.addCookie('samllbear',num)
-        const realnum = $('#num2').text()
-        $('#num2').text(parseInt(realnum+1))
+         _this.vote(_this,2).then(() => {
+          _this.tips('投票成功')
+          num = (parseInt(num)+1).toString()
+          _this.addCookie('samllbear',num)
+          const realnum = $('#num2').text()
+          $('#num2').text(parseInt(realnum)+1)
+        }).catch(() => {
+          _this.tips('投票失败')
+        })
       })
       $('#btn3').click(function(){
         let num = _this.getCookie('samllbear')||0
@@ -108,10 +118,15 @@
           _this.tips('您今天已投两票')
           return
         }
-        num = (parseInt(num)+1).toString()
-        _this.addCookie('samllbear',num)
-        const realnum = $('#num3').text()
-        $('#num3').text(parseInt(realnum+1))
+         _this.vote(_this,3).then(() => {
+          _this.tips('投票成功')
+          num = (parseInt(num)+1).toString()
+          _this.addCookie('samllbear',num)
+          const realnum = $('#num3').text()
+          $('#num3').text(parseInt(realnum)+1)
+        }).catch(() => {
+          _this.tips('投票失败')
+        })
       })
 
     },
@@ -181,7 +196,7 @@
     vote: function(_this,id){
       return new Promise((resolve,reject) => {
         $.ajax({
-          url:`${_this.baseUrl}/enroll3/vote`,
+          url:`${_this.baseUrl}/enroll/vote`,
           type: "POST",
           dataType: "json",
           contentType: 'application/json; charset=utf-8', 
@@ -251,18 +266,26 @@
       $('video').off('playing', fun);
       $('video').on('playing', fun);
     },
-    rankList:function(_this){
+    rankList:function(){
+      const _this = this
       $.ajax({
-        url:`${_this.baseUrl}/enroll3/rankList`,
+        url:`${_this.baseUrl}/enroll/voteIndexList`,
         type: "POST",
         dataType: "json",
         contentType: 'application/json; charset=utf-8', 
         data: JSON.stringify({sign:_this.sign}),
         success: function(result){
-          const {code,data:{showList}} = result
+          const {code,data:{indexList}} = result
           if(code===200){
-            _this.listData = showList
-            _this.creatList(showList,_this)
+            indexList.forEach((item) => {
+              if(item.id===1){
+                $('#num1').text(item.num)
+              }else if(item.id===2){
+                $('#num2').text(item.num)
+              }else if(item.id===3){
+                $('#num3').text(item.num)
+              }
+            })
           }
         },
         error: function(err){
@@ -284,9 +307,12 @@
         location.href = location.href.replace('https','http')
         return
       }
+      const mobileHeight = window.innerHeight
+      $('.swiper-name').height(mobileHeight-180)
       this.wxShare()
       this.swiper()
       this.clickEvt()
+      this.rankList()
       // this.audioFn()
     }
   }
